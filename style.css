@@ -5,6 +5,11 @@
     
 }
 
+body {
+    background-color: #0c0b0b;
+    overflow-x: hidden;
+}
+
 .header, .header-about, .header-equipments, .header-contact, .header-membership {
     min-height: 70vh; /* Yüksekliği biraz kıstım, alt sayfalar için ideal */
     width: 100%;
@@ -70,14 +75,14 @@ nav img {
 }
 
 .nav-links ul li a:hover {
-    color: #e73030;
+    color: #CC1A1E;
 }
 
 .nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
-    background: #e73030;
+    background: #CC1A1E;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -127,8 +132,8 @@ nav .fa {
 }
 
 .hero-btn:hover {
-    background: #e73030;
-    border: 1px solid #e73030;
+    background: #CC1A1E;
+    border: 1px solid #CC1A1E;
     transition: 0.5s;
 }
 
@@ -197,7 +202,7 @@ nav .fa {
 
 .column:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #e73030; /* Kırmızı parlama */
+    box-shadow: 0 0 20px #CC1A1E; /* Kırmızı parlama */
 }
 
 .trainer {
@@ -318,7 +323,7 @@ nav .fa {
 }
 
 .pricing-col:hover {
-    box-shadow: 0 0 20px rgba(201, 22, 22, 0.5);
+    box-shadow: 0 0 20px #CC1A1E;
     border-color: var(--primary-color);
 }
 
@@ -412,7 +417,7 @@ nav .fa {
 }
 
 .bmi-btn:hover {
-    background: #e73030;
+    background: #CC1A1E;
 }
 
 #bmiResult {
@@ -454,55 +459,71 @@ nav .fa {
 }
 
 .modal {
-    display: none;
+    display: none; /* JS ile 'flex' yapılacak */
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-    align-items: center;
+    height: 100%; /* Fallback */
+    height: 100dvh; /* Mobil tarayıcılar için dinamik yükseklik */
+    background-color: rgba(0, 0, 0, 0.96);
+            
+    /* --- MERKEZLEME KODLARI --- */
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .modal-content {
-    display: block;
+    /* Resmin boyutlarını kontrol altına alıyoruz */
+    max-width: 90vw;   /* Ekran genişliğinin %90'ı */
+    max-height: 85vh;  /* Ekran yüksekliğinin %85'i */
     width: auto;
     height: auto;
-    max-width: 95vw;
-    max-height: 95vh;
-    top: 50%;
-    left: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 28px;
-    box-shadow: 0 0 20px #e73030;
-    object-fit: contain; 
-    margin: 0 auto;
-    -webkit-user-select: none;
-    user-select: none;
-    touch-action: none;
+    display: block;
+    margin: auto;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(204, 26, 30, 0.2);
+    object-fit: contain; /* Resmi bozmadan kutuya sığdır */
+    animation: zoom 0.3s;
 }
 
+@keyframes zoom {
+    from {transform: scale(0.5); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* KAPATMA BUTONU */
 .close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
+    position: fixed; /* Resmi değil ekranı referans alsın */
+    top: 20px;
+    right: 25px;
     color: #f1f1f1;
-    font-size: 28px;
-    cursor: pointer;
+    font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
+    z-index: 100000;
+    background: rgba(255, 255, 255, 0.15);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.3s;
-    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
-.close:hover, .close:focus {
-    color: #bbb;
+.close:hover {
+    color: #CC1A1E;
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
 }
+
+.icons i:hover { color: #CC1A1E; }
 
 /* --- İLETİŞİM STİLİ --- */
 .contact {
@@ -538,7 +559,7 @@ nav .fa {
 .contact .contactInfo .box .icon {
     min-width: 60px;
     height: 60px;
-    background: #e73030;
+    background: #CC1A1E;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -611,13 +632,13 @@ nav .fa {
 .contact .contactForm .inputBox input:valid ~ span,
 .contact .contactForm .inputBox textarea:focus ~ span,
 .contact .contactForm .inputBox textarea:valid ~ span {
-    color: #e73030;
+    color: #CC1A1E;
     font-size: 12px;
     transform: translateY(-20px);
 }
 
 .contact .contactForm .inputBox input[type="submit"] {
-    background: #e73030;
+    background: #CC1A1E;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -657,7 +678,7 @@ nav .fa {
     
     .nav-links {
         position: absolute;
-        background: #971616;
+        background: #CC1A1E;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -703,12 +724,30 @@ nav .fa {
     }
 
     .modal {
-        padding: 12px;
+        padding-left: 1px;
     }
-    
+
     .modal-content {
-        max-width: 100vw;
-        max-height: calc(100vh - 40px); /* close buton ve biraz boşluk için */
+        width: 90vw;
+        height: auto;
+        max-width: 90vw;   /* Ekran genişliğinin %90'ı */
+        max-height: 85vh;  /* Ekran yüksekliğinin %85'i */
+        display: block;
+        object-fit: contain;
+        margin-left: 17px;
+    }
+
+    .close {
+        top: 20px;
+        right: 20px;
+        font-size: 35px;
+        background: rgba(0,0,0,0.5); /* Mobilde görünürlük artsın */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .contact {
