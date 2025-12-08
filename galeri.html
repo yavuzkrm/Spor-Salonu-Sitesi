@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKA GYM - Spor Aletlerimiz</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <section class="header-equipments">
+        <nav>
+            <a href="index.html"><img src="logo.png" alt="RED GYM Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="uyelik.html">Üyelik</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="iletisim.html">iletişim</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="row-equipments">
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+        </div>
+        <div class="row-equipments">
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?q=80&w=1470&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?q=80&w=1474&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1469&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+        </div>
+        <div class="row-equipments">
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1374&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1596357395217-80de13130e92?q=80&w=1471&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1375&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+        </div>
+        <div class="row-equipments">
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1570829460005-c840387bb1ca?q=80&w=1632&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1540496905036-5937c10647cc?q=80&w=1470&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+            <div class="column-equipments">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" onclick="resmiAc(this)">
+            </div>
+        </div>
+    </section>
+
+    <div id="resimModal" class="modal">
+            <span class="close" onclick="resmiKapat()">&times;</span>
+            <img class="modal-content" id="buyukResim">
+            <div id="caption"></div>
+    </div>
+
+    <section class="footer">
+        <h4>YKA GYM Hakkında</h4>
+        <p>Hendek'in en kapsamlı spor salonu olarak hizmet vermekteyiz</p>
+        <div class="icons">          
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+        <p>Made by Atack &copy; 2025</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

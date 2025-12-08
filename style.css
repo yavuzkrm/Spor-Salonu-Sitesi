@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.header, .header-about, .header-equipments, .header-contact, .header-membership {
+    min-height: 70vh; /* Yüksekliği biraz kıstım, alt sayfalar için ideal */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.header {
+    min-height: 100vh; /* Ana sayfa tam ekran kalsın */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop');
+}
+
+.header-about {
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1375&auto=format&fit=crop');
+}
+
+.header-equipments {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1540496905036-5937c10647cc?q=80&w=1470&auto=format&fit=crop');
+}
+
+.header-contact {
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1469&auto=format&fit=crop');
+}
+
+.header-membership {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550345332-09e3ac987658?q=80&w=1374&auto=format&fit=crop');
+}
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.2); /* Menü arkası hafif belli olsun */
+}
+
+nav img {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #e73030;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e73030;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fa {
+    display: none;
+    color: white;
+}
+
+/* -- TEXT BOX STİLLERİ -- */
+.text-box {
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 54px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: transparent;
+    position: relative;
+}
+
+.hero-btn:hover {
+    background: #e73030;
+    border: 1px solid #e73030;
+    transition: 0.5s;
+}
+
+.caption {
+    width: 90%;
+    padding: 4% 6%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background: rgb(12, 11, 11);
+}
+
+.caption h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.caption p {
+    font-size: 19px;
+    color: #f4f4f4ff;
+    margin-top: 10px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.column {
+    flex-basis: 31%;
+    background: #2e2e2e; /* Daha koyu modern gri */
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    color: white;
+}
+
+.column h2 {
+    font-size: 24px;
+    color: white;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.column p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.column img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #e73030; /* Kırmızı parlama */
+}
+
+.trainer {
+    width: 100%;
+    margin: auto;
+    padding: 4% 6%;
+    padding-top: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgb(12, 11, 11);
+}
+
+.trainer h1 {
+    font-size: 40px;
+    color: white;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.trainer h2 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.trainer h3 {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.trainer p {
+    font-size: 18px;
+    color: #f4f4f4ff;
+    margin-top: 10px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.trainer-img {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    height: 500px;
+}
+
+/* --- HAKKIMIZDA STİLİ --- */
+.about-us {
+    width: 90%;
+    padding: 4% 6%;
+    margin: auto;
+    text-align: left;
+    padding-top: 105px;
+    background: rgb(12, 11, 11);
+}
+
+.row-about {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 50px;
+}
+
+.about-us h2 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+.about-us .column-about p {
+    font-size: 18px;
+    color: #f4f4f4ff;
+    margin-top: 10px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.about-us .column-about img {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* -- FİYATLANDIRMA (PRICING) -- */
+.pricing {
+    width: 90%;
+    padding: 4% 6%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background: rgb(12, 11, 11);
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 75px;
+}
+
+.pricing-col {
+    flex-basis: 31%;
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 40px 20px;
+    transition: 0.5s;
+    border: 1px solid #333;
+    position: relative;
+    color: white;
+}
+
+.pricing-col:hover {
+    box-shadow: 0 0 20px rgba(201, 22, 22, 0.5);
+    border-color: var(--primary-color);
+}
+
+.pricing-col h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 40px;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pricing-col ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.pricing-col ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.pricing-col ul li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 40px;
+}
+.title-text p {
+    margin: auto;
+    font-size: 54px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+/* -- BMI HESAPLAYICI -- */
+.bmi-section {
+    background: #151515;
+    padding: 50px 0;
+    color: white;
+}
+
+.bmi-container {
+    max-width: 600px;
+    margin: auto;
+    background: #222;
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+.bmi-btn {
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    color: white;
+    border: 1px solid #333;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.bmi-btn:hover {
+    background: #e73030;
+}
+
+#bmiResult {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- GALLERY STİLİ --- */
+.row-equipments {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 30px;
+    padding: 0 6%;
+}
+
+.header-equipments .text-box p {
+    margin: 10px 0 40px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.column-equipments {
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.column-equipments img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.column-equipments:hover img {
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 95vw;
+    max-height: 95vh;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 28px;
+    box-shadow: 0 0 20px #e73030;
+    object-fit: contain; 
+    margin: 0 auto;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: none;
+}
+
+.close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: #f1f1f1;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+}
+
+/* --- İLETİŞİM STİLİ --- */
+.contact {
+    position: relative;
+    padding: 80px 100px 3%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(12, 11, 11);
+}
+
+.row-contact {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 150px;
+    padding-right: 100px;
+}
+
+.contact .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contact .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #e73030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.contact .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.contact .contactInfo .box .text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color:#00bcd4;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact .contactForm {
+    width: 80%;
+    height: 80%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contact .contactForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact .contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact .contactForm .inputBox input, .contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contact .contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contact .contactForm .inputBox input:focus ~ span,
+.contact .contactForm .inputBox input:valid ~ span,
+.contact .contactForm .inputBox textarea:focus ~ span,
+.contact .contactForm .inputBox textarea:valid ~ span {
+    color: #e73030;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact .contactForm .inputBox input[type="submit"] {
+    background: #e73030;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* --- FOOTER STİLİ --- */
+.footer {
+    width: 100%;
+    padding: 2% 6%;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgb(12, 11, 11);
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.icons i {
+    font-size: 24px;
+    margin: 0 15px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+/* --- MOBİL UYUMLULUK (MEDIA QUERIES) --- */
+@media(max-width: 768px) {
+
+    .text-box h1 { font-size: 30px; }
+
+    .nav-links ul li { display: block; margin-bottom: 20px 0; }
+    
+    .nav-links {
+        position: absolute;
+        background: #971616;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -220px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+        padding-top: 60px;
+        padding-left: 20px;
+    }
+
+    nav .fa {
+        display: block;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+    .nav-links .fa-times {
+        margin: 0; 
+        position: absolute; 
+        top: 20px;
+        left: 20px;
+    } 
+    .row { flex-direction: column; }
+    .row-about { flex-direction: column; gap: 30px; }
+    .row-equipments { flex-direction: column; gap: 30px; }
+    .pricing-row { flex-direction: column; gap: 30px; }
+
+    .about-us .column-about img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .trainer h1 {
+        font-size: 40px;
+    }
+
+    .trainer-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+    
+    .modal-content {
+        max-width: 100vw;
+        max-height: calc(100vh - 40px); /* close buton ve biraz boşluk için */
+    }
+
+    .contact {
+        padding: 40px 20px 3%;
+    }
+
+    .contact .contactInfo {
+        width: 100%;
+    }
+
+    .contact .contactInfo p {
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+
+    .contact .contactForm {
+        width: 100%;
+    }
+
+    .contact .row-contact {
+        width: 100%;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

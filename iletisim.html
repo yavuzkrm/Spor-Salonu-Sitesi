@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKA GYM - İletişim</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" xintegrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <section class="header-contact">
+        <nav>
+            <a href="index.html"><img src="logo.png" alt="RED GYM Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="uyelik.html">Üyelik</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Bizimle İletişime Geçin</h1>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="row-contact">
+            <div class="contactInfo">
+                <div class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Adres</h3>
+                        <p>Başpınar, Remzi Efendi Cd. No:28 İç Kapı: A, 54300 Hendek/Sakarya</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Telefon</h3>
+                        <p>0 555 838 37 44</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>E-Posta</h3>
+                        <p>atackeremyavuz@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <!-- DÜZELTME: ID eklendi ve action kısmına senin linkini koydum (JS çalışmazsa yedek olsun diye) -->
+                <form id="contactForm" action="https://formspree.io/f/mvgebqar" method="POST">
+                    <h2>Bize Ulaşın</h2>
+                    <div class="inputBox">
+                        <input type="text" name="name" required>
+                        <span>İsim</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required>
+                        <span>E-Posta</span>
+                    </div>
+                    <div class="inputBox">
+                        <!-- DÜZELTME: name="message" eklendi. -->
+                        <textarea name="message" required="required"></textarea>
+                        <span>Mesajınız</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Gönder">
+                    </div>
+                </form>
+            </div>
+        </div>       
+    </section>
+    <section class="footer">
+        <h4>YKA GYM Hakkında</h4>
+        <p>Hendek'in en kapsamlı spor salonu olarak hizmet vermekteyiz</p>
+        <div class="icons">          
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+        <p>Made by Atack &copy; 2025</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
