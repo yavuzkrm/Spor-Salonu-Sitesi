@@ -13,86 +13,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="logo.png" alt="RED GYM Logo"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="uyelik.html">Üyelik</a></li>
-                    <li><a href="galeri.html">Galeri</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
-                </ul>
+    <div class="site-wrapper">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="logo.png" alt="RED GYM Logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="uyelik.html">Üyelik</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+            <h1>HAYATINI ŞEKİLLENDİR<br>SPORLA FARK YARAT</h1>
+            <p>Hendek'in En Kapsamlı Spor Salonu</p>
+            <a href="hakkimizda.html" class="hero-btn">Daha Fazla Bilgi</a>
+        </div>
+        </section>
+        <section class="caption">
+            <h1>FITNESS CENTER</h1>
+            <p>En iyi aletler, en iyi antrenörler ve en iyi atmosfer ile hedeflerinize ulaşın.</p>
+            <div class="row">
+                <div class="column">
+                    <h2>Sporun Fiziksel Faydaları</h2>
+                    <p>Spor, kasları düzenli olarak uyararak kuvvet ve dayanıklılığı artırır.
+                        Dolaşım sistemini güçlendirip kalp ve damar sağlığını iyileştirir.
+                        Düzenli hareket, eklemlerin esnekliğini korur ve duruş bozukluklarını azaltır.
+                        Metabolizmayı hızlandırarak yağ yakımını destekler ve vücut kompozisyonunu iyileştirir.
+                        Ayrıca bağışıklık sistemini güçlendirip hastalıklara karşı direnci artırır.</p>
+                </div>
+                <div class="column">
+                    <h2>Sporun Zihinsel Faydaları</h2>
+                    <p>Spor, zihindeki gerginliği azaltarak stresle baş etmeyi kolaylaştırır.
+                        Düzenli hareket, beynin odaklanma ve karar verme süreçlerini güçlendirir.
+                        Aynı zamanda özgüveni artırır çünkü kişi kendi sınırlarını görüp ilerlemesini takip eder.
+                        Sosyal ortamlarda yapılan spor, yalnızlık hissini azaltıp zihinsel dayanıklılığı besler.
+                        Son olarak, düzenli spor uyku düzenini iyileştirerek zihnin toparlanmasını sağlar.</p>
+                </div>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <div class="text-box">
-        <h1>HAYATINI ŞEKİLLENDİR<br>SPORLA FARK YARAT</h1>
-        <p>Hendek'in En Kapsamlı Spor Salonu</p>
-        <a href="hakkimizda.html" class="hero-btn">Daha Fazla Bilgi</a>
+        </section>
+        <section class="trainer">
+            <h1>Antrenörlerimizle Tanışın</h1>
+            <p>Profesyonel ekibimizle hedeflerinize ulaşın.</p>
+            <div class="row">
+                <div class="column">
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1374&auto=format&fit=crop" alt="Antrenör">
+                    <h3>Ahmet Yılmaz</h3>
+                    <p>Uzmanlık: Vücut Geliştirme</p>
+                </div>
+                <div class="column">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1374&auto=format&fit=crop" alt="Antrenör">
+                    <h3>Elif Demir</h3>
+                    <p>Uzmanlık: Kardiyo ve Dayanıklılık</p>
+                </div>
+                <div class="column">
+                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1469&auto=format&fit=crop" alt="Antrenör">
+                    <h3>Mehmet Kaya</h3>
+                    <p>Uzmanlık: Fonksiyonel Antrenman</p>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+        <h4>YKA GYM Hakkında</h4>
+            <p>Hendek'in en kapsamlı spor salonu olarak hizmet vermekteyiz</p>
+            <div class="icons">          
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <p>Made by Atack &copy; 2025</p>
+        </section>
+        <script src="script.js"></script>
     </div>
-    </section>
-    <section class="caption">
-        <h1>FITNESS CENTER</h1>
-        <p>En iyi aletler, en iyi antrenörler ve en iyi atmosfer ile hedeflerinize ulaşın.</p>
-        <div class="row">
-            <div class="column">
-                <h2>Sporun Fiziksel Faydaları</h2>
-                <p>Spor, kasları düzenli olarak uyararak kuvvet ve dayanıklılığı artırır.
-                    Dolaşım sistemini güçlendirip kalp ve damar sağlığını iyileştirir.
-                    Düzenli hareket, eklemlerin esnekliğini korur ve duruş bozukluklarını azaltır.
-                    Metabolizmayı hızlandırarak yağ yakımını destekler ve vücut kompozisyonunu iyileştirir.
-                    Ayrıca bağışıklık sistemini güçlendirip hastalıklara karşı direnci artırır.</p>
-            </div>
-            <div class="column">
-                <h2>Sporun Zihinsel Faydaları</h2>
-                <p>Spor, zihindeki gerginliği azaltarak stresle baş etmeyi kolaylaştırır.
-                    Düzenli hareket, beynin odaklanma ve karar verme süreçlerini güçlendirir.
-                    Aynı zamanda özgüveni artırır çünkü kişi kendi sınırlarını görüp ilerlemesini takip eder.
-                    Sosyal ortamlarda yapılan spor, yalnızlık hissini azaltıp zihinsel dayanıklılığı besler.
-                    Son olarak, düzenli spor uyku düzenini iyileştirerek zihnin toparlanmasını sağlar.</p>
-            </div>
-        </div>
-    </section>
-    <section class="trainer">
-        <h1>Antrenörlerimizle Tanışın</h1>
-        <p>Profesyonel ekibimizle hedeflerinize ulaşın.</p>
-        <div class="row">
-            <div class="column">
-                <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1374&auto=format&fit=crop" alt="Antrenör">
-                <h3>Ahmet Yılmaz</h3>
-                <p>Uzmanlık: Vücut Geliştirme</p>
-            </div>
-            <div class="column">
-                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1374&auto=format&fit=crop" alt="Antrenör">
-                <h3>Elif Demir</h3>
-                <p>Uzmanlık: Kardiyo ve Dayanıklılık</p>
-            </div>
-            <div class="column">
-                <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1469&auto=format&fit=crop" alt="Antrenör">
-                <h3>Mehmet Kaya</h3>
-                <p>Uzmanlık: Fonksiyonel Antrenman</p>
-            </div>
-        </div>
-    </section>
-    <section class="footer">
-       <h4>YKA GYM Hakkında</h4>
-        <p>Hendek'in en kapsamlı spor salonu olarak hizmet vermekteyiz</p>
-        <div class="icons">          
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com" target="_blank">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-        </div>
-        <p>Made by Atack &copy; 2025</p>
-    </section>
-    <script src="script.js"></script>
 </body>
 </html>
