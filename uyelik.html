@@ -12,100 +12,101 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    
-    <section class="header-membership">
-        <nav>
-            <a href="index.html"><img src="logo.png" alt="Logo"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="uyelik.html">Üyelik</a></li>
-                    <li><a href="galeri.html">Galeri</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
-                </ul>
+    <div class="site-wrapper">
+        <section class="header-membership">
+            <nav>
+                <a href="index.html"><img src="logo.png" alt="Logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="uyelik.html">Üyelik</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <h1>ÜYELİK PAKETLERİ</h1>
+                <p>Sana en uygun paketi seç ve değişime başla.</p>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <div class="text-box">
-            <h1>ÜYELİK PAKETLERİ</h1>
-            <p>Sana en uygun paketi seç ve değişime başla.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Fiyatlandırma Bölümü -->
-    <section class="pricing">
-        <div class="title-text">
-            <p>PLANLAR</p>
-        </div>
-        <div class="pricing-row">
-            <div class="pricing-col">
-                <h3>BAŞLANGIÇ</h3>
-                <div class="price">750₺ <span>/ay</span></div>
-                <ul>
-                    <li><i class="fa fa-check"></i> Fitness Alanı Kullanımı</li>
-                    <li><i class="fa fa-check"></i> Duş ve Soyunma Odası</li>
-                    <li><i class="fa fa-check"></i> Temel Program Desteği</li>
-                    <li style="color: #555;"><i class="fa fa-times" style="color: #555;"></i> Grup Dersleri</li>
-                    <li style="color: #555;"><i class="fa fa-times" style="color: #555;"></i> Özel Eğitmen</li>
-                </ul>
-                <a href="iletisim.html" class="hero-btn">Seç</a>
+        <!-- Fiyatlandırma Bölümü -->
+        <section class="pricing">
+            <div class="title-text">
+                <p>PLANLAR</p>
             </div>
-            <div class="pricing-col" style="border: 2px solid #c91616; transform: scale(1.05);">
-                <div style="position:absolute; top:0; right:0; background:#c91616; color:white; padding:5px 10px; font-size:12px;">ÖNERİLEN</div>
-                <h3>GOLD</h3>
-                <div class="price">1200₺ <span>/ay</span></div>
-                <ul>
-                    <li><i class="fa fa-check"></i> Tüm Alanlara Erişim</li>
-                    <li><i class="fa fa-check"></i> Sınırsız Grup Dersi</li>
-                    <li><i class="fa fa-check"></i> Vücut Analizi (Aylık)</li>
-                    <li><i class="fa fa-check"></i> Misafir Getirme Hakkı (1)</li>
-                    <li style="color: #555;"><i class="fa fa-times" style="color: #555;"></i> Özel Beslenme Planı</li>
-                </ul>
-                <a href="iletisim.html" class="hero-btn">Şimdi Katıl</a>
+            <div class="pricing-row">
+                <div class="pricing-col">
+                    <h3>BAŞLANGIÇ</h3>
+                    <div class="price">750₺ <span>/ay</span></div>
+                    <ul>
+                        <li><i class="fa fa-check"></i> Fitness Alanı Kullanımı</li>
+                        <li><i class="fa fa-check"></i> Duş ve Soyunma Odası</li>
+                        <li><i class="fa fa-check"></i> Temel Program Desteği</li>
+                        <li style="color: #555;"><i class="fa fa-times" style="color: #555;"></i> Grup Dersleri</li>
+                        <li style="color: #555;"><i class="fa fa-times" style="color: #555;"></i> Özel Eğitmen</li>
+                    </ul>
+                    <a href="iletisim.html" class="hero-btn">Seç</a>
+                </div>
+                <div class="pricing-col" style="border: 2px solid #c91616; transform: scale(1.05);">
+                    <div style="position:absolute; top:0; right:0; background:#c91616; color:white; padding:5px 10px; font-size:12px;">ÖNERİLEN</div>
+                    <h3>GOLD</h3>
+                    <div class="price">1200₺ <span>/ay</span></div>
+                    <ul>
+                        <li><i class="fa fa-check"></i> Tüm Alanlara Erişim</li>
+                        <li><i class="fa fa-check"></i> Sınırsız Grup Dersi</li>
+                        <li><i class="fa fa-check"></i> Vücut Analizi (Aylık)</li>
+                        <li><i class="fa fa-check"></i> Misafir Getirme Hakkı (1)</li>
+                        <li style="color: #555;"><i class="fa fa-times" style="color: #555;"></i> Özel Beslenme Planı</li>
+                    </ul>
+                    <a href="iletisim.html" class="hero-btn">Şimdi Katıl</a>
+                </div>
+                <div class="pricing-col">
+                    <h3>VIP PRO</h3>
+                    <div class="price">2500₺ <span>/ay</span></div>
+                    <ul>
+                        <li><i class="fa fa-check"></i> 7/24 Erişim</li>
+                        <li><i class="fa fa-check"></i> Haftada 2 Özel Ders (PT)</li>
+                        <li><i class="fa fa-check"></i> Beslenme Danışmanlığı</li>
+                        <li><i class="fa fa-check"></i> Sauna & Spa Erişimi</li>
+                        <li><i class="fa fa-check"></i> Ücretsiz Ekipman Dolabı</li>
+                    </ul>
+                    <a href="iletisim.html" class="hero-btn">Seç</a>
+                </div>
             </div>
-            <div class="pricing-col">
-                <h3>VIP PRO</h3>
-                <div class="price">2500₺ <span>/ay</span></div>
-                <ul>
-                    <li><i class="fa fa-check"></i> 7/24 Erişim</li>
-                    <li><i class="fa fa-check"></i> Haftada 2 Özel Ders (PT)</li>
-                    <li><i class="fa fa-check"></i> Beslenme Danışmanlığı</li>
-                    <li><i class="fa fa-check"></i> Sauna & Spa Erişimi</li>
-                    <li><i class="fa fa-check"></i> Ücretsiz Ekipman Dolabı</li>
-                </ul>
-                <a href="iletisim.html" class="hero-btn">Seç</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- BMI Hesaplayıcı Bölümü -->
-    <section class="bmi-section">
-        <div class="title-text">
-            <p>SAĞLIK DURUMU</p>
-            <h1>Vücut Kitle İndeksi (BMI) Hesapla</h1>
-        </div>
-        <div class="bmi-container">
-            <div class="input-group">
-                <input type="number" id="height" min="1" max="300" placeholder="Boyunuz (cm) - Örn: 180">
-                <input type="number" id="weight" min="1" max="500" placeholder="Kilonuz (kg) - Örn: 75">
+        <!-- BMI Hesaplayıcı Bölümü -->
+        <section class="bmi-section">
+            <div class="title-text">
+                <p>SAĞLIK DURUMU</p>
+                <h1>Vücut Kitle İndeksi (BMI) Hesapla</h1>
             </div>
-            <button class="bmi-btn" onclick="calculateBMI()">HESAPLA</button>
-            <div id="bmiResult" style="text-align:center;"></div>
-        </div>
-    </section>
+            <div class="bmi-container">
+                <div class="input-group">
+                    <input type="number" id="height" min="1" max="300" placeholder="Boyunuz (cm) - Örn: 180">
+                    <input type="number" id="weight" min="1" max="500" placeholder="Kilonuz (kg) - Örn: 75">
+                </div>
+                <button class="bmi-btn" onclick="calculateBMI()">HESAPLA</button>
+                <div id="bmiResult" style="text-align:center;"></div>
+            </div>
+        </section>
 
-    <section class="footer">
-        <h4>YKA GYM Hakkında</h4>
-        <p>Hendek'in en kapsamlı spor salonu olarak hizmet vermekteyiz.</p>
-        <div class="icons">          
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-tiktok"></i>
-        </div>
-        <p>Made by Atack &copy; 2025</p>
-    </section>
-    <script src="script.js"></script>
+        <section class="footer">
+            <h4>YKA GYM Hakkında</h4>
+            <p>Hendek'in en kapsamlı spor salonu olarak hizmet vermekteyiz.</p>
+            <div class="icons">          
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <p>Made by Atack &copy; 2025</p>
+        </section>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
