@@ -5,9 +5,19 @@
     
 }
 
-body {
-    background-color: #0c0b0b;
-    overflow-x: hidden;
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Bunu mutlaka ekleyin */
+    width: 100%;
+}
+
+.site-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Sihirli değnek budur */
+    display: flex; /* Bazen flex yapmak taşmaları hizalar */
+    flex-direction: column;
 }
 
 .header, .header-about, .header-equipments, .header-contact, .header-membership {
@@ -687,7 +697,13 @@ nav .fa {
         z-index: 2;
         transition: 0.5s;
         padding-top: 60px;
-        padding-left: 20px;
+        padding-left: 0px;
+        overflow: hidden;
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 0 20px;
     }
 
     nav .fa {
