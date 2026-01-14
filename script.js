@@ -126,110 +126,6 @@ function resmiKapat() {
     }
 }
 
-// Toggle zoom centered at point (clientX/clientY). If already zoomed, reset.
-function toggleZoom(img, point) {
-    if (!img) return;
-    var isZoomed = img._scale && img._scale > 1;
-    if (!isZoomed) {
-        var rect = img.getBoundingClientRect();
-        var cx = (point.clientX - rect.left) / rect.width;
-        var cy = (point.clientY - rect.top) / rect.height;
-        var scale = 2; // zoom factor
-        img._scale = scale;
-        // Use transform-origin to center zoom on tap point and avoid manual translate math
-        img.style.transformOrigin = (cx * 100) + '% ' + (cy * 100) + '%';
-        img._translateX = 0;
-        img._translateY = 0;
-        img.style.transform = 'scale(' + scale + ') translate(0px,0px)';
-        img.classList.add('zoomed');
-    } else {
-        img._scale = 1;
-        img._translateX = 0;
-        img._translateY = 0;
-        img.style.transform = '';
-        img.style.transformOrigin = '';
-        img.classList.remove('zoomed');
-    }
-}
-
-// Attach touch handlers for swipe-to-close and pan-when-zoomed
-function attachGalleryTouchHandlers(modal, img) {
-    var startY = 0;
-    var startX = 0;
-    var dragging = false;
-    var panning = false;
-    var threshold = 120; // px to trigger close
-
-    function touchStart(e) {
-        if (!e.touches || e.touches.length === 0) return;
-        startY = e.touches[0].clientY;
-        startX = e.touches[0].clientX;
-        dragging = true;
-        panning = img._scale && img._scale > 1;
-        img.style.transition = '';
-    }
-
-    function touchMove(e) {
-        if (!dragging) return;
-        var curY = e.touches[0].clientY;
-        var curX = e.touches[0].clientX;
-        var dy = curY - startY;
-        var dx = curX - startX;
-
-        if (panning) {
-            // pan image when zoomed: update translate values and clamp
-            img._translateX = (img._translateX || 0) + dx / (img._scale || 1);
-            img._translateY = (img._translateY || 0) + dy / (img._scale || 1);
-
-            // clamp panning so edges remain visible
-            var rect = img.getBoundingClientRect();
-            var maxTX = (rect.width * (img._scale - 1)) / 2 || 0;
-            var maxTY = (rect.height * (img._scale - 1)) / 2 || 0;
-            img._translateX = Math.max(-maxTX, Math.min(maxTX, img._translateX));
-            img._translateY = Math.max(-maxTY, Math.min(maxTY, img._translateY));
-
-            // ensure absolute centering origin is present
-            img.style.position = 'absolute';
-            img.style.left = '50%';
-            img.style.top = '50%';
-            img.style.margin = '0';
-
-            img.style.transform = 'translate(-50%, -50%) scale(' + (img._scale || 1) + ') translate(' + img._translateX + 'px,' + img._translateY + 'px)';
-
-            // update start positions for next move event
-            startX = curX;
-            startY = curY;
-        } else {
-            // swipe to close (not zoomed)
-            img.style.transform = 'translateY(' + dy + 'px)';
-            var opacity = Math.max(0.35, 1 - Math.abs(dy) / 600);
-            modal.style.background = 'rgba(0,0,0,' + opacity + ')';
-        }
-    }
-
-    function touchEnd(e) {
-        dragging = false;
-        // if not panning, check swipe distance to close
-        if (!panning) {
-            var endY = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientY : startY;
-            var deltaY = endY - startY;
-            if (Math.abs(deltaY) > threshold) {
-                resmiKapat();
-            } else {
-                img.style.transition = 'transform 0.2s ease';
-                img.style.transform = '';
-                modal.style.background = 'rgba(0,0,0,0.96)';
-            }
-        }
-    }
-
-    modal.addEventListener('touchstart', touchStart, { passive: true });
-    modal.addEventListener('touchmove', touchMove, { passive: true });
-    modal.addEventListener('touchend', touchEnd);
-
-    modal._touchHandlers = { start: touchStart, move: touchMove, end: touchEnd };
-}
-
 // --- İLETİŞİM FORMU (E-POSTA GÖNDERME) ---
 const contactForm = document.getElementById('contactForm');
 
@@ -283,3 +179,4 @@ if (contactForm) {
         }
     });
 }
+
