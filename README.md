@@ -1,33 +1,33 @@
-# YKA GYM: Spor Salonu Web Sitesi
+# YKA GYM: Gym Website
 
-Ağ Tabanlı Programlamaya Giriş dersi için hazırladığım, hayali bir spor salonunun tanıtım sitesi. Herhangi bir framework kullanmadan HTML, CSS ve JavaScript ile yazıldı.
+A promotional website for a fictional gym, made for my Introduction to Web-Based Programming course. It is written in plain HTML, CSS and JavaScript, without any framework. The site content is in Turkish.
 
-**Canlı:** https://yavuzkrm.github.io/Spor-Salonu-Sitesi/
+**Live:** https://yavuzkrm.github.io/Spor-Salonu-Sitesi/
 
-## Sayfalar
+## Pages
 
-- **Ana Sayfa:** salonun tanıtımı, sporun faydaları ve antrenörler
-- **Hakkımızda**
-- **Üyelik:** üyelik paketleri ve boy/kilo girilerek çalışan bir vücut kitle indeksi (BMI) hesaplayıcısı
-- **Galeri:** resme tıklayınca büyüyen görünüm (ESC tuşu, dışarı tıklama veya çift dokunma ile kapanıyor)
-- **İletişim:** Formspree üzerinden gerçekten e-posta gönderen iletişim formu (`fetch` ile, sayfa yenilenmeden)
+- **Home:** introduces the gym, the benefits of exercise and the trainers
+- **About**
+- **Membership:** membership plans and a BMI calculator that works from height and weight
+- **Gallery:** click a photo to enlarge it (close it with Esc, a click outside or a double tap)
+- **Contact:** a contact form that sends real emails through Formspree (using `fetch`, without reloading the page)
 
-Küçük ekranlarda menü yandan açılan bir panele dönüşüyor.
+On small screens the navigation turns into a slide-in side menu.
 
-## Çalıştırma
+## Running it
 
-Kurulum gerekmiyor. `index.html` dosyasını tarayıcıda açman yeterli.
+Nothing to install. Open `index.html` in a browser.
 
-## Dosyalar
+## Files
 
 ```
 index.html, hakkimizda.html, uyelik.html, galeri.html, iletisim.html
-style.css     # tüm sayfaların stilleri, mobil uyum
-script.js     # menü, BMI hesaplama, galeri, form gönderimi
+style.css     # styles for all pages, responsive layout
+script.js     # menu, BMI calculator, gallery, form submission
 ```
 
-Dersin proje raporu da repoda PDF olarak bulunuyor.
+The course project report (in Turkish) is included as a PDF.
 
-## Lisans
+## License
 
 MIT
