@@ -30,4 +30,4 @@ The course project report (in Turkish) is included as a PDF.
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
